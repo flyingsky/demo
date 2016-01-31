@@ -1,0 +1,215 @@
+
+html, body {
+    height: 100%;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-copy {
+    background-image: url(icons/Icon-Duplicate.svg);
+}
+
+.icon-copy:hover {
+    background-image: url(icons/Icon-Duplicate-Hover.svg);
+}
+
+.icon-trash {
+    background-image: url(icons/Icon-Delete.svg);
+}
+.icon-trash:hover {
+    background-image: url(icons/Icon-Delete-Hover.svg);
+}
+
+.icon-add {
+    background-image: url(icons/Icon-Add.svg);
+}
+
+.icon-blue {
+    background-color: #0099E5;
+}
+
+.icon-blue:hover {
+    background-color: #0F77C2;
+}
+
+.icon-circle {
+    border-radius: 10px;
+}
+
+.left-panel {
+    background: #fafafa;
+    width: 360px;
+    height: 100%;
+    display: inline-block;
+}
+
+.btn-add {
+    margin-left: 50px;
+    position: absolute;
+}
+
+.card {
+    min-height: 400px;
+    padding: 0 24px 24px 24px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.card.closed {
+    min-height: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.card.closed:hover {
+    cursor: pointer;
+}
+
+.card.animation {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.card {
+    border: 1px solid rgba(159, 167, 171, 0.18);
+    box-shadow: 0 1px 2px black;
+}
+
+.card.inactive {
+    border: 1px solid rgba(159, 167, 171, 0.18);
+}
+
+.card:hover {
+    border: 1px solid rgba(19, 182, 234, 0.5);
+}
+
+.card-title {
+    display: inline-block;
+    border: none;
+    width: calc(100% - 82px); /* 24 left padding + 54px toolkit + 4px margin between title and toolkit???*/
+    height: 40px;
+    font-size: 20px;
+    color: #608099;
+    padding: 0 0 0 24px;
+}
+
+span.card-title {
+    line-height: 46px;
+}
+
+.card-title:focus {
+    outline: none;
+}
+
+.card-header {
+    padding-top: 20px;
+    margin: 0 -24px;
+}
+
+.card.closed .card-header {
+    padding-top: 0;
+}
+
+.card-header:hover .card-toolkit, .card-header:active .card-toolkit, .card-header:focus .card-toolkit {
+    visibility: visible;
+}
+
+.card-toolkit {
+    display: inline-block;
+    visibility: hidden;
+    padding-right: 10px;
+}
+
+.card-body {
+
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*************** tabs begin ********************/
+.tabs {
+    width: 100%;
+    float: none;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    border-bottom: 1px solid #e6e1f1;
+}
+.tabs li {
+    float: left;
+    display: block;
+    width: 33.3%;
+}
+.tabs input[type="radio"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.tabs label {
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    color: #43637F;
+}
+
+.tabs li:first-child label{
+    text-align: left;
+}
+
+.tabs li:last-child label{
+    text-align: right;
+}
+
+.tabs label:hover {
+
+}
+.tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-height: 200px;
+}
+
+.tabs [id^="tab"] + label {
+
+}
+
+.tabs [id^="tab"]:checked + label {
+    border-bottom: 2px solid #66ACDE;
+}
+.tabs [id^="tab"]:checked ~ .tab-content {
+    display: block;
+}
+/*************** tabs end ********************/
+
+.section {
+    min-height: 150px;
+}
