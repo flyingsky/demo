@@ -31,7 +31,7 @@ angular.module('App', ['ngAnimate']).
         };
 
         $timeout(function() {
-          $el.addClass('animation');
+          angular.element($el.children()[0]).addClass('animation');
           $timeout(function() {
             $scope.card.isClosed = false;
           }, 100);

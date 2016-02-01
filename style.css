@@ -3,6 +3,10 @@ html, body {
     height: 100%;
 }
 
+body, input {
+    font-family: Gotham, Arial, sans-serif !important;
+}
+
 .pull-left {
     float: left;
 }
@@ -12,8 +16,8 @@ html, body {
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -50,6 +54,22 @@ html, body {
     border-radius: 10px;
 }
 
+/************typography***********/
+.tab-title {
+    font-size: 12px;
+    color: #43637F;
+    line-height: 12px;
+    font-weight: 500;
+}
+
+.body-copy {
+    font-size: 12px;
+    line-height: 16px;
+    color: #2D4455;
+    font-weight: 200;
+}
+
+/************ container and act button***********/
 .left-panel {
     background: #fafafa;
     width: 360px;
@@ -62,11 +82,12 @@ html, body {
     position: absolute;
 }
 
+/************ card ***********/
 .card {
     min-height: 400px;
     padding: 0 24px 24px 24px;
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card.closed {
@@ -80,8 +101,8 @@ html, body {
 }
 
 .card.animation {
-    -webkit-transition:all linear 0.5s;
-    transition:all linear 0.5s;
+    -webkit-transition:min-height linear 2.5s;
+    transition:min-height linear 2.5s;
 }
 
 .card {
@@ -134,8 +155,12 @@ span.card-title {
     padding-right: 10px;
 }
 
-.card-body {
+.card.closed .card-body {
+    opacity: 0;
+}
 
+.card .card-body {
+    opacity: 1;
 }
 
 .group:after {
@@ -152,6 +177,7 @@ span.card-title {
     position: relative;
     padding: 0;
     border-bottom: 1px solid #e6e1f1;
+    height: 24px;
 }
 .tabs li {
     float: left;
@@ -166,12 +192,9 @@ span.card-title {
 .tabs label {
     display: block;
     padding: 5px 0;
-    font-size: 15px;
-    font-weight: bold;
     cursor: pointer;
     position: relative;
     text-align: center;
-    color: #43637F;
 }
 
 .tabs li:first-child label{
@@ -190,8 +213,6 @@ span.card-title {
     display: none;
     overflow: hidden;
     width: 100%;
-    font-size: 17px;
-    line-height: 25px;
     position: absolute;
     top: 50px;
     left: 0;

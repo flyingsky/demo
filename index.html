@@ -34,18 +34,18 @@
       <ul class="group tabs">
         <li>
           <input type="radio" name="{{tabName}}" id="{{'tabData' + tabName}}" checked>
-          <label for="{{'tabData' + tabName}}">Data</label>
+          <label class="tab-title" for="{{'tabData' + tabName}}">Data</label>
           <div id="tabContentData" class="tab-content">
             <div class="section">
               <div class="section-header group">
-                <span class="pull-left">Rows</span>
+                <span class="pull-left body-copy">Rows</span>
                 <span class="pull-right"><i class="icon icon-add icon-blue icon-circle"></i></span>
               </div>
             </div>
 
             <div class="section">
               <div class="section-header group">
-                <span class="pull-left">Columns</span>
+                <span class="pull-left body-copy">Columns</span>
                 <span class="pull-right"><i class="icon icon-add icon-blue icon-circle"></i></span>
               </div>
             </div>
@@ -54,16 +54,16 @@
 
         <li>
           <input type="radio" name="{{tabName}}" id="{{'tabVisualization' + tabName}}">
-          <label for="{{'tabVisualization' + tabName}}">Visualization</label>
-          <div id="tabContentVisualization" class="tab-content">
+          <label class="tab-title" for="{{'tabVisualization' + tabName}}">Visualization</label>
+          <div id="tabContentVisualization" class="tab-content body-copy">
             Visualization
           </div>
         </li>
 
         <li>
           <input type="radio" name="{{tabName}}" id="{{'tabSettings' + tabName}}">
-          <label for="{{'tabSettings' + tabName}}">Settings</label>
-          <div id="tabContentSettings" class="tab-content">
+          <label class="tab-title" for="{{'tabSettings' + tabName}}">Settings</label>
+          <div id="tabContentSettings" class="tab-content body-copy">
             Settings
           </div>
         </li>
