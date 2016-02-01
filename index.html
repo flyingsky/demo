@@ -30,7 +30,7 @@
         <i class="icon icon-trash" ng-click="onRemoved({card:card})"></i>
       </div>
     </div>
-    <div class="card-body ng-hide" ng-show="!card.isClosed">
+    <div class="card-body ng-hide" ng-show="!card.closed && !card.isBodyHide">
       <ul class="group tabs">
         <li>
           <input type="radio" name="{{tabName}}" id="{{'tabData' + tabName}}" checked>

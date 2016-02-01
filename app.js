@@ -34,6 +34,9 @@ angular.module('App', ['ngAnimate']).
           angular.element($el.children()[0]).addClass('animation');
           $timeout(function() {
             $scope.card.isClosed = false;
+            $timeout(function() {
+              $scope.card.isBodyHide = false;
+            }, 500);
           }, 100);
         }, 100);
       }
@@ -44,12 +47,13 @@ angular.module('App', ['ngAnimate']).
 
     $scope.addCard = function() {
       function doAddCard() {
-        $scope.openedCard = {isClosed: true};
+        $scope.openedCard = {isClosed: true, isBodyHide: true};
         $scope.cards.push($scope.openedCard);
       }
 
       if ($scope.openedCard) {
         $scope.openedCard.isClosed = true;
+        $scope.openedCard.isBodyHide = true;
         $timeout(doAddCard, 0);
       } else {
         doAddCard();
@@ -60,6 +64,7 @@ angular.module('App', ['ngAnimate']).
       if (!card.isClosed) {
         $scope.openedCard = null;
         card.isClosed = true;
+        card.isBodyHide = true;
       }
     };
 
@@ -67,9 +72,13 @@ angular.module('App', ['ngAnimate']).
       if (card.isClosed) {
         if ($scope.openedCard) {
           $scope.openedCard.isClosed = true;
+          $scope.openedCard.isBodyHide = true;
         }
         $scope.openedCard = card;
         card.isClosed = false;
+        $timeout(function() {
+          card.isBodyHide = false;
+        }, 500);
       }
     };
 

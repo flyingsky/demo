@@ -101,8 +101,8 @@ body, input {
 }
 
 .card.animation {
-    -webkit-transition:min-height linear 2.5s;
-    transition:min-height linear 2.5s;
+    -webkit-transition:min-height linear .5s;
+    transition:min-height linear .5s;
 }
 
 .card {
